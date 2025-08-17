@@ -11,12 +11,12 @@ else
 BIN_DIR=$(GOOS)-$(GOARCH)
 endif
 NKND_BUILD_PARAM=-ldflags "-s -w -X github.com/robertsarosi/rsvpn/v2/config.Version=$(VERSION)"
-#NKNC_BUILD_PARAM=-ldflags "-s -w -X github.com/robertsarosi/rsvpn/v2/cmd/nknc/common.Version=$(VERSION)"
+#NKNC_BUILD_PARAM=-ldflags "-s -w -X github.com/robertsarosi/rsvpn/v2/cmd/rsvpnc/common.Version=$(VERSION)"
 NKNC_BUILD_PARAM=$(NKND_BUILD_PARAM)
-NKND_OUTPUT=$(BUILD_DIR)/$(BIN_DIR)/nknd$(EXT)
-NKNC_OUTPUT=$(BUILD_DIR)/$(BIN_DIR)/nknc$(EXT)
-NKND_MAIN=./cmd/nknd/
-NKNC_MAIN=./cmd/nknc/
+NKND_OUTPUT=$(BUILD_DIR)/$(BIN_DIR)/rsvpnd$(EXT)
+NKNC_OUTPUT=$(BUILD_DIR)/$(BIN_DIR)/rsvpnc$(EXT)
+NKND_MAIN=./cmd/rsvpnd/
+NKNC_MAIN=./cmd/rsvpnc/
 
 help:  ## Show available options with this Makefile
 	@grep -F -h "##" $(MAKEFILE_LIST) | grep -v grep | awk 'BEGIN { FS = ":.*?##" }; { printf "%-15s  %s\n", $$1,$$2 }'
@@ -38,7 +38,7 @@ crossbuild: web
 	@cp -a dashboard/web/dist $(BUILD_DIR)/$(BIN_DIR)/web
 ifeq ($(GOOS), windows)
 	echo "IF NOT EXIST config.json COPY default.json config.json" > $(BUILD_DIR)/$(BIN_DIR)/start-gui.bat
-	echo "nknd.exe --web-gui-create-wallet" >> $(BUILD_DIR)/$(BIN_DIR)/start-gui.bat
+	echo "rsvpnd.exe --web-gui-create-wallet" >> $(BUILD_DIR)/$(BIN_DIR)/start-gui.bat
 	chmod +x $(BUILD_DIR)/$(BIN_DIR)/start-gui.bat
 endif
 	${MAKE} zip
@@ -84,12 +84,12 @@ format:
 
 .PHONY: clean
 clean:
-	rm -rf nknd nknc
+	rm -rf rsvpnd rsvpnc
 	rm -rf build/
 
 .PHONY: deepclean
 deepclean:
-	rm -rf nknd nknc build
+	rm -rf rsvpnd rsvpnc build
 
 .PHONY: pb
 pb:

@@ -1,3 +1,4 @@
+# RSVPN — rebranded NKN fork
 [![NKN](https://github.com/robertsarosi/rsvpn/wiki/img/nkn_logo.png)](https://nkn.org)
 
 # NKN Full Node
