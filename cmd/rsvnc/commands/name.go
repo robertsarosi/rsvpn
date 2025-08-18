@@ -17,7 +17,7 @@ import (
 var nameCmd = &cobra.Command{
 	Use:   "name",
 	Short: "name registration",
-	Long:  "With nknc name, you could register name for your address.",
+	Long:  "With rsvnc name, you could register name for your address.",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return nameAction(cmd)
 	},

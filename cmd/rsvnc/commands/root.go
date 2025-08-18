@@ -26,9 +26,9 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:     "nknc",
+	Use:     "rsvnc",
 	Version: config.Version,
-	Short:   "nknc - A cli tool for the NKN blockchain",
+	Short:   "rsvnc - A cli tool for the RSVPN blockchain",
 	Long:    "",
 }
 

@@ -1,13 +1,15 @@
-# RSVPN — rebranded NKN fork
-[![NKN](https://github.com/robertsarosi/rsvpn/wiki/img/nkn_logo.png)](https://nkn.org)
+# RSVPN (RVPN)
 
-# NKN Full Node
+# RSVPN — rebranded RSVPN fork
+[![RSVPN](https://github.com/robertsarosi/rsvpn/v2/wiki/img/nkn_logo.png)](https://rsvpn.org)
 
-### _Official Go implementation of NKN full node._
+# RSVPN Full Node
+
+### _Official Go implementation of RSVPN full node._
 
 <br/>
 
-[![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Go Report Card](https://goreportcard.com/badge/github.com/robertsarosi/rsvpn/v2)](https://goreportcard.com/report/github.com/robertsarosi/rsvpn/v2) [![Build Status](https://github.com/robertsarosi/rsvpn/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/robertsarosi/rsvpn/actions/workflows/build-ubuntu.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
+[![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Go Report Card](https://goreportcard.com/badge/github.com/robertsarosi/rsvpn/v2)](https://goreportcard.com/report/github.com/robertsarosi/rsvpn/v2) [![Build Status](https://github.com/robertsarosi/rsvpn/v2/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/robertsarosi/rsvpn/v2/actions/workflows/build-ubuntu.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
 ### Dev Status: V2 line, Production (Stable and Feature-Complete)
 
@@ -15,28 +17,28 @@
 
 <br/>
 
-> NKN, short for New Kind of Network, is a project aiming to rebuild the
+> RSVPN, short for New Kind of Network, is a project aiming to rebuild the
 > Internet that will be truly open, decentralized, dynamic, safe, shared and
 > owned by the community.
 
-Official website: [https://nkn.org/](https://nkn.org/)
+Official website: [https://rsvpn.org/](https://rsvpn.org/)
 
-Note: This is the official **full node** implementation of the NKN protocol,
+Note: This is the official **full node** implementation of the RSVPN protocol,
 which relays data for clients and earn mining rewards. For **client**
 implementation which can send and receive data, please refer to:
 
-- [nkn-sdk-go](https://github.com/robertsarosi/rsvpn-sdk-go)
-- [nkn-sdk-js](https://github.com/robertsarosi/rsvpn-sdk-js)
-- [nkn-java-sdk](https://github.com/robertsarosi/rsvpn-java-sdk)
+- [rsvpn-sdk-go](https://github.com/robertsarosi/rsvpn-sdk-go)
+- [rsvpn-sdk-js](https://github.com/robertsarosi/rsvpn-sdk-js)
+- [rsvpn-java-sdk](https://github.com/robertsarosi/rsvpn-java-sdk)
 
 ## Introduction
 
-The core of the NKN network consists of many connected nodes distributed
+The core of the RSVPN network consists of many connected nodes distributed
 globally. Every node is only connected to and aware of a few other nodes called
 neighbors. Packets can be transmitted from any node to any other node in an
 efficient and verifiable route. Data can be sent to any clients without public
-or static IP address using their permanent NKN address with end-to-end
-encryption. The network stack of NKN network is open source at another repo
+or static IP address using their permanent RSVPN address with end-to-end
+encryption. The network stack of RSVPN network is open source at another repo
 called [nnet](https://github.com/nknorg/nnet) that can be used to build other
 decentralized/distributed systems.
 
@@ -50,7 +52,7 @@ massive nodes can be reached efficiently by only communicating with neighbors
 using our consensus algorithm based on Cellular Automata. Consensus is reached
 for every block to prevent fork.
 
-More details can be found in [our wiki](https://github.com/robertsarosi/rsvpn/wiki).
+More details can be found in [our wiki](https://github.com/robertsarosi/rsvpn/v2/wiki).
 
 ## Technical Highlights
 
@@ -65,7 +67,7 @@ More details can be found in [our wiki](https://github.com/robertsarosi/rsvpn/wi
 ### Use pre-built binaries
 
 You just need to download and decompress the correct version matching your OS
-and architecture from [github releases](https://github.com/robertsarosi/rsvpn/releases).
+and architecture from [github releases](https://github.com/robertsarosi/rsvpn/v2/releases).
 
 Now you can jump to [configuration](#configuration) for how to configure and run
 a node.
@@ -81,7 +83,7 @@ docker](#building-using-docker)) on our official Docker Hub account. You can get
 it by
 
 ```shell
-$ docker pull nknorg/nkn
+$ docker pull nknorg/rsvpn
 ```
 
 Now you can jump to [configuration](#configuration) for how to configure and run
@@ -96,21 +98,21 @@ docs](https://docs.docker.com/install/#supported-platforms)
 Build and tag Docker image
 
 ```shell
-$ docker build -f docker/Dockerfile -t nknorg/nkn .
+$ docker build -f docker/Dockerfile -t nknorg/rsvpn .
 ```
 
 This command should be run once every time you update the code base.
 
 ### Building from source
 
-To build from source, you need a properly configured Go environment (lookup the required version within [go.mod](https://github.com/robertsarosi/rsvpn/blob/master/go.mod#L3), and
+To build from source, you need a properly configured Go environment (lookup the required version within [go.mod](https://github.com/robertsarosi/rsvpn/v2/blob/master/go.mod#L3), and
 see [Go Official Installation Documentation](https://golang.org/doc/install) for install instructions).
 
 Build the source code with make
 
 ```shell
 $ git clone https://github.com/robertsarosi/rsvpn.git
-$ cd nkn
+$ cd rsvpn
 $ make
 ```
 
@@ -126,8 +128,8 @@ go test -v ./chain/store
 
 After building is successful, you should see two executables:
 
-- `nknd`: the nkn node program
-- `nknc`: command line tool for nkn node control
+- `nknd`: the rsvpn node program
+- `nknc`: command line tool for rsvpn node control
 
 Now you can see [configuration](#configuration) for how to configure and run a
 node.
@@ -137,16 +139,16 @@ resulting binaries are stored in `build` directory.
 
 ### Configuration
 
-When starting a NKN node (i.e. running `nknd`), it will reads a few configurable
+When starting a RSVPN node (i.e. running `nknd`), it will reads a few configurable
 files: `config.json` for configuration, `wallet.json` for wallet, and `certs/*`
 for certificates. Additionally, it will read directory `web` for web GUI
 interface static assets. By default `nknd` assumes they are located in the
 current working directory.
 
 For Docker, a directory containing `config.json`, `wallet.json` (if exists) and
-`certs/` should be mapped to `/nkn/data` directory in the container. If not
-provided, the default config and certs will be copied to `/nkn/data/`, and a
-wallet and random password will be generated and saved to `/nkn/data/` on nknd
+`certs/` should be mapped to `/rsvpn/data` directory in the container. If not
+provided, the default config and certs will be copied to `/rsvpn/data/`, and a
+wallet and random password will be generated and saved to `/rsvpn/data/` on nknd
 launch.
 
 The path of config file, wallet file, database directory and log directory can
@@ -163,8 +165,8 @@ We provide a few sample `config.json`:
 You can copy the one you want to `config.json` or write your own.
 
 For convenience, we ship a copy of `config.mainnet.json` in release version (as
-`default.json`) and in docker image (under `/nkn/`). The docker container will
-copy this default one to `/nkn/data/config.json` if not exists on nknd launch.
+`default.json`) and in docker image (under `/rsvpn/`). The docker container will
+copy this default one to `/rsvpn/data/config.json` if not exists on nknd launch.
 
 If config file is not provided, node will join the mainnet by default.
 
@@ -187,13 +189,13 @@ NKNRQxosmUixL8bvLAS5G79m1XNx3YqPsFPW   35db285ea2f91499164cd3e19203ab5e525df6216
 **[IMPORTANT] Each node needs to use a unique wallet. If you use share wallet
 among multiple nodes, only one of them will be able to join the network!**
 
-If you are using Docker, it should be `docker run -it -v ${PWD}:/nkn/data
-nknorg/nkn nknc wallet -c` instead, assuming you want to store the `wallet.json`
+If you are using Docker, it should be `docker run -it -v ${PWD}:/rsvpn/data
+nknorg/rsvpn nknc wallet -c` instead, assuming you want to store the `wallet.json`
 in your current working directory. If you want it to be saved to another
 directory, you need to change `${PWD}` to that directory.
 
-The docker container will create a wallet saved to `/nkn/data/wallet.json` and a
-random password saved to `/nkn/data/wallet.pswd` if not exists on nknd launch.
+The docker container will create a wallet saved to `/rsvpn/data/wallet.json` and a
+random password saved to `/rsvpn/data/wallet.pswd` if not exists on nknd launch.
 
 #### `certs/`
 
@@ -213,7 +215,7 @@ blockchain data, and `Log` to store logs. By default `nknd` will creates these
 directories in the current working directory, but it can be changed by passing
 `--chaindb` and `--log` arguments to `nknd` or specify in config.json.
 
-Now you can [join the mainnet](#join-the-mainnet) or [create a private chain](https://github.com/robertsarosi/rsvpn/wiki/Create-a-Private-Chain).
+Now you can [join the mainnet](#join-the-mainnet) or [create a private chain](https://github.com/robertsarosi/rsvpn/v2/wiki/Create-a-Private-Chain).
 
 ### Join the MainNet
 
@@ -231,18 +233,18 @@ $ ./nknd
 If you are using Docker then you should run the following command instead:
 
 ```shell
-$ docker run -p 30001-30005:30001-30005 -v ${PWD}:/nkn/data --name nkn --rm -it nknorg/nkn
+$ docker run -p 31001-31005:31001-31005 -v ${PWD}:/rsvpn/data --name rsvpn --rm -it nknorg/rsvpn
 ```
 
 If you would like to enable web GUI interface from outside of the container, you
-need to replace `-p 30001-30005:30001-30005` with `-p 30000-30005:30000-30005`.
+need to replace `-p 31001-31005:31001-31005` with `-p 30000-31005:30000-31005`.
 
 If you get an error saying `docker: Error response from daemon: Conflict. The
-container name "/nkn" is already in use by container ...`, you should run
-`docker rm nkn` first to remove the old container.
+container name "/rsvpn" is already in use by container ...`, you should run
+`docker rm rsvpn` first to remove the old container.
 
 If everything goes well, you should be part of the MainNet after a few minutes!
-You can query your wallet balance (which includes the NKN token you've mined)
+You can query your wallet balance (which includes the RSVPN token you've mined)
 by:
 
 ```shell
@@ -252,12 +254,12 @@ $ ./nknc wallet -l balance
 or if you are using Docker:
 
 ```shell
-$ docker exec -it nkn nknc wallet -l balance
+$ docker exec -it rsvpn nknc wallet -l balance
 ```
 
 If there is a problem, you may want to check if any of the previous steps went
 wrong. If the problem still persists, [create an
-issue](https://github.com/robertsarosi/rsvpn/issues/new) or ask us in our [Discord
+issue](https://github.com/robertsarosi/rsvpn/v2/issues/new) or ask us in our [Discord
 group](#community).
 
 ### [Recommended] Using Beneficiary Address
@@ -274,11 +276,11 @@ address.
 
 ### NAT traversal and port forwarding
 
-By default, `nknd` will try to detect if your node is behind a router and if your router supports UPnP or NAT-PMP protocol, and if success, it will try to set up port forwarding automatically. You can add `--no-nat` flag when starting nknd OR add `"NAT": false` in `config.json` to disable automatic port forwarding. If your router does not support such protocol, you **have to** setup port forwarding on your router for port 30001 as well as **all** other ports specified in `config.json` (30001-30005 by default), otherwise other nodes cannot establish connections to you and you will **NOT** be able to earn mining rewards even though your node can still run and sync blocks.
+By default, `nknd` will try to detect if your node is behind a router and if your router supports UPnP or NAT-PMP protocol, and if success, it will try to set up port forwarding automatically. You can add `--no-nat` flag when starting nknd OR add `"NAT": false` in `config.json` to disable automatic port forwarding. If your router does not support such protocol, you **have to** setup port forwarding on your router for port 31001 as well as **all** other ports specified in `config.json` (31001-31005 by default), otherwise other nodes cannot establish connections to you and you will **NOT** be able to earn mining rewards even though your node can still run and sync blocks.
 
 When setting up port forwarding, public port needs to be the same as private
-port mapped to your node. For example, you should map port 30001 on your
-router's public IP address to port 30001 on your node's internal IP address.
+port mapped to your node. For example, you should map port 31001 on your
+router's public IP address to port 31001 on your node's internal IP address.
 
 The specific steps to setup port forwarding depends on your router. But in
 general, you need to log in to the admin interface of your router (typically in
@@ -291,15 +293,15 @@ your router model or name online.
 
 **Can I submit a bug, suggestion or feature request?**
 
-Yes. Please [open an issue](https://github.com/robertsarosi/rsvpn/issues/new) for that.
+Yes. Please [open an issue](https://github.com/robertsarosi/rsvpn/v2/issues/new) for that.
 
-**Can I contribute patches to NKN project?**
+**Can I contribute patches to RSVPN project?**
 
 Yes, we appreciate your help! To make contributions, please fork the repo, push
 your changes to the forked repo with signed-off commits, and open a pull request
 here.
 
-Please follow our [Golang Style Guide](https://github.com/robertsarosi/rsvpn/wiki/NKN-Golang-Style-Guide)
+Please follow our [Golang Style Guide](https://github.com/robertsarosi/rsvpn/v2/wiki/RSVPN-Golang-Style-Guide)
 for coding style.
 
 Please sign off your commit. This means adding a line "Signed-off-by: Name
@@ -313,7 +315,7 @@ git commit -s
 
 ## Community
 
-- [Forum](https://forum.nkn.org/)
+- [Forum](https://forum.rsvpn.org/)
 - [Discord](https://discord.gg/c7mTynX)
 - [Telegram](https://t.me/nknorg)
 - [Reddit](https://www.reddit.com/r/nknblockchain/)

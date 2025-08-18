@@ -10,8 +10,8 @@ import (
 // pruningCmd represents the pruning command
 var pruningCmd = &cobra.Command{
 	Use:   "pruning",
-	Short: "state trie pruning for nknd",
-	Long:  "state trie pruning for nknd",
+	Short: "state trie pruning for rsvnd",
+	Long:  "state trie pruning for rsvnd",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return pruningAction(cmd)
 	},

@@ -58,8 +58,8 @@ export default {
   PER_PAGE_TEXT: '每页数量',
 
   footer: {
-    TITLE: 'NKN：新一代互联网的网络基础设施',
-    TEXT: 'NKN是区块链技术驱动的一种开放、去中心化的新型网络。NKN倡导用户共享网络资源，鼓励大家构建人人为我，我为人人的共建共享对等网络，在让共建者因协助数据传输而获得经济回报的同时为开发者提供一个开放，便捷，高效和安全的网络平台，让所有人都能体验更好的网络应用和服务。'
+    TITLE: 'RSVPN：新一代互联网的网络基础设施',
+    TEXT: 'RSVPN是区块链技术驱动的一种开放、去中心化的新型网络。RSVPN倡导用户共享网络资源，鼓励大家构建人人为我，我为人人的共建共享对等网络，在让共建者因协助数据传输而获得经济回报的同时为开发者提供一个开放，便捷，高效和安全的网络平台，让所有人都能体验更好的网络应用和服务。'
   },
 
   node_status: {
@@ -68,7 +68,7 @@ export default {
     NODE_VERSION: '节点版本',
     ID: 'ID',
     RELAY_MESSAGE_COUNT: '节点转发消息数量',
-    HEIGHT: 'NKN节点区块高度',
+    HEIGHT: 'RSVPN节点区块高度',
     BENEFICIARY_ADDR: '受益人地址'
   },
   current_wallet_status: {

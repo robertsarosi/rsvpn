@@ -1,7 +1,7 @@
 {
-  "name": "nkn-web",
-  "short_name": "nkn-web",
-  "description": "nkn-web",
+  "name": "rsvpn-web",
+  "short_name": "rsvpn-web",
+  "description": "rsvpn-web",
   "icons": [],
   "start_url": "/web/?standalone=true",
   "display": "standalone",

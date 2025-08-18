@@ -12,7 +12,7 @@ import (
 var debugCmd = &cobra.Command{
 	Use:   "debug",
 	Short: "blockchain node debugging",
-	Long:  "With nknc debug, you could debug blockchain node.",
+	Long:  "With rsvnc debug, you could debug blockchain node.",
 	Run: func(cmd *cobra.Command, args []string) {
 		debugAction()
 	},

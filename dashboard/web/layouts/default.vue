@@ -8,7 +8,7 @@
                     <v-avatar tile size="35">
                         <img src="~/static/img/logo.png" alt="avatar">
                     </v-avatar>
-                    NKN WEB
+                    RSVPN WEB
                 </h3>
             </v-toolbar-title>
 

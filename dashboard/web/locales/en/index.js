@@ -58,8 +58,8 @@ export default {
   PER_PAGE_TEXT: 'Rows per pages',
 
   footer: {
-    TITLE: 'NKN: Network Infra for Decentralized Internet',
-    TEXT: 'NKN is the new kind of P2P network connectivity protocol & ecosystem powered by a novel public blockchain. We use economic incentives to motivate Internet users to share network connection and utilize unused bandwidth. NKN\'s open, efficient, and robust networking infrastructure enables application developers to build the decentralized Internet so everyone can enjoy secure, low cost, and universally accessible connectivity.'
+    TITLE: 'RSVPN: Network Infra for Decentralized Internet',
+    TEXT: 'RSVPN is the new kind of P2P network connectivity protocol & ecosystem powered by a novel public blockchain. We use economic incentives to motivate Internet users to share network connection and utilize unused bandwidth. RSVPN\'s open, efficient, and robust networking infrastructure enables application developers to build the decentralized Internet so everyone can enjoy secure, low cost, and universally accessible connectivity.'
   },
 
   node_status: {
@@ -68,7 +68,7 @@ export default {
     NODE_VERSION: 'Node version',
     ID: 'ID',
     RELAY_MESSAGE_COUNT: 'Message relayed by node',
-    HEIGHT: 'NKN node block height',
+    HEIGHT: 'RSVPN node block height',
     BENEFICIARY_ADDR: 'Beneficiary address'
   },
   current_wallet_status: {

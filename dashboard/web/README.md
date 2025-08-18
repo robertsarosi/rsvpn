@@ -1,6 +1,6 @@
 # demo
 
-> nkn-web
+> rsvpn-web
 
 ## Build Setup
 

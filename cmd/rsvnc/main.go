@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	cmd "github.com/robertsarosi/rsvpn/v2/cmd/nknc/commands"
+	cmd "github.com/robertsarosi/rsvpn/v2/cmd/rsvnc/commands"
 )
 
 func main() {

@@ -28,31 +28,31 @@ func SetupPortMapping() error {
 		return err
 	}
 
-	err = gateway.Add(config.Parameters.NodePort, "NKN Node")
+	err = gateway.Add(config.Parameters.NodePort, "RSVPN Node")
 	if err != nil {
 		return err
 	}
 	log.Infof("Mapped external port %d to internal port %d", config.Parameters.NodePort, config.Parameters.NodePort)
 
-	err = gateway.Add(config.Parameters.HttpWsPort, "NKN Node")
+	err = gateway.Add(config.Parameters.HttpWsPort, "RSVPN Node")
 	if err != nil {
 		return err
 	}
 	log.Infof("Mapped external port %d to internal port %d", config.Parameters.HttpWsPort, config.Parameters.HttpWsPort)
 
-	err = gateway.Add(config.Parameters.HttpWssPort, "NKN Node")
+	err = gateway.Add(config.Parameters.HttpWssPort, "RSVPN Node")
 	if err != nil {
 		return err
 	}
 	log.Infof("Mapped external port %d to internal port %d", config.Parameters.HttpWssPort, config.Parameters.HttpWssPort)
 
-	err = gateway.Add(config.Parameters.HttpJsonPort, "NKN Node")
+	err = gateway.Add(config.Parameters.HttpJsonPort, "RSVPN Node")
 	if err != nil {
 		return err
 	}
 	log.Infof("Mapped external port %d to internal port %d", config.Parameters.HttpJsonPort, config.Parameters.HttpJsonPort)
 
-	err = gateway.Add(config.Parameters.HttpsJsonPort, "NKN Node")
+	err = gateway.Add(config.Parameters.HttpsJsonPort, "RSVPN Node")
 	if err != nil {
 		return err
 	}

@@ -17,8 +17,8 @@ import (
 // idCmd represents the id command
 var idCmd = &cobra.Command{
 	Use:   "id",
-	Short: "generate id for nknd",
-	Long:  "With nknc id, you could generate ID.",
+	Short: "generate id for rsvnd",
+	Long:  "With rsvnc id, you could generate ID.",
 	Run: func(cmd *cobra.Command, args []string) {
 		generateIDAction(cmd)
 	},

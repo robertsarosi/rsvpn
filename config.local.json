@@ -1,6 +1,6 @@
 {
   "nat": false,
   "hostname": "127.0.0.1",
-  "seedList": ["http://127.0.0.1:30003"],
+  "seedList": ["http://127.0.0.1:31003"],
   "genesisBlockProposer": ""
 }

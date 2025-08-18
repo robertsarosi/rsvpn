@@ -1,28 +1,27 @@
-idea/*
-temp/*
-idea/
-*.patch
-.idea/
-.log
-*.orig
-*.rej
-cscope*
-.vscode
-*.suo
-.DS_Store
-*~
-*.bak
-
+# build artefaktok
 /build/
-/certs/
-/ChainDB/
-/ChainDB.config
-/Log/
-/vendor/
-/test/
+/bin/
+/dist/
 
-/nknd
-/nknc
-/wallet.json
-/wallet.pswd
-/config.json
+# lokális adat
+/data/
+/ChainDB/
+/ChainDB-*
+*.db
+*.log
+
+# pénztárca és jelszófájlok SOHA ne kerüljenek gitbe
+wallet.json
+wallet.pswd
+*.key
+*.crt
+*.pem
+
+# lokális/dev konfigok
+config.*.local.json
+config.dev.json
+
+# ideiglenes editor fájlok
+*.swp
+*.swo
+.DS_Store

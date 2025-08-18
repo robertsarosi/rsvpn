@@ -1,7 +1,7 @@
 {
-  "name": "nkn-web",
+  "name": "rsvpn-web",
   "version": "0.0.0",
-  "description": "nkn-web",
+  "description": "rsvpn-web",
   "author": "heron",
   "private": true,
   "scripts": {

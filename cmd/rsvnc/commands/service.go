@@ -16,8 +16,8 @@ const requestTimeout = 5 * time.Second
 // serviceCmd represents the service command
 var serviceCmd = &cobra.Command{
 	Use:   "service",
-	Short: "NKN-based service",
-	Long:  "NKN-based service.",
+	Short: "RSVPN-based service",
+	Long:  "RSVPN-based service.",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return serviceAction(cmd)
 	},
@@ -30,7 +30,7 @@ var (
 func init() {
 	rootCmd.AddCommand(serviceCmd)
 
-	serviceCmd.Flags().BoolVarP(&list, "list", "l", false, "show nkn service list")
+	serviceCmd.Flags().BoolVarP(&list, "list", "l", false, "show rsvpn service list")
 }
 
 func serviceAction(cmd *cobra.Command) error {
@@ -39,7 +39,7 @@ func serviceAction(cmd *cobra.Command) error {
 		var netClient = &http.Client{
 			Timeout: requestTimeout,
 		}
-		resp, err := netClient.Get("https://forum.nkn.org/t/1836.json?include_raw=1")
+		resp, err := netClient.Get("https://forum.rsvpn.org/t/1836.json?include_raw=1")
 		if err != nil {
 			log.Errorf("GET request: %v\n", err)
 			return err

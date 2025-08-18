@@ -18,7 +18,7 @@ import (
 // ((21 * 58**35) + (18 * 58**34) + (21 * 58**33)) >> 192 = 0x02b824
 const FOOLPROOFPREFIX = 0x02b824 + 1 // +1 for avoid affected by lower 192bits shift-add
 
-// PREFIXLEN = len( 0x02b825.Bytes() )
+// PREFIXLEN = len( 0x0352A1.Bytes() )
 const PREFIXLEN = 3
 const UINT160SIZE = 20
 const SHA256CHKSUM = 4

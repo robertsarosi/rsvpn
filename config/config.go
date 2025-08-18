@@ -62,8 +62,8 @@ const (
 	TxPoolCleanupInterval           = ConsensusDuration
 	ShortHashSize                   = uint32(8)
 	MaxAssetPrecision               = uint32(8)
-	NKNAssetName                    = "NKN"
-	NKNAssetSymbol                  = "nkn"
+	NKNAssetName                    = "RSVPN"
+	NKNAssetSymbol                  = "rsvpn"
 	NKNAssetPrecision               = uint32(8)
 	GASAssetName                    = "New Network Coin"
 	GASAssetSymbol                  = "nnc"
@@ -260,11 +260,11 @@ var (
 	Parameters                   = &Configuration{
 		Version:                      1,
 		Transport:                    "tcp",
-		NodePort:                     30001,
-		HttpWsPort:                   30002,
-		HttpWssPort:                  30004,
-		HttpJsonPort:                 30003,
-		HttpsJsonPort:                30005,
+		NodePort:                     31001,
+		HttpWsPort:                   31002,
+		HttpWssPort:                  31004,
+		HttpJsonPort:                 31003,
+		HttpsJsonPort:                31005,
 		NAT:                          true,
 		Mining:                       true,
 		MiningDebug:                  true,
@@ -329,14 +329,14 @@ var (
 		ClientMsgCacheSize:           0,
 		GenesisBlockProposer:         "a0309f8280ca86687a30ca86556113a253762e40eb884fc6063cad2b1ebd7de5",
 		SeedList: []string{
-			"http://mainnet-seed-0001.nkn.org:30003",
-			"http://mainnet-seed-0002.nkn.org:30003",
-			"http://mainnet-seed-0003.nkn.org:30003",
-			"http://mainnet-seed-0004.nkn.org:30003",
-			"http://mainnet-seed-0005.nkn.org:30003",
-			"http://mainnet-seed-0006.nkn.org:30003",
-			"http://mainnet-seed-0007.nkn.org:30003",
-			"http://mainnet-seed-0008.nkn.org:30003",
+			"http://mainnet-seed-0001.rsvpn.org:31003",
+			"http://mainnet-seed-0002.rsvpn.org:31003",
+			"http://mainnet-seed-0003.rsvpn.org:31003",
+			"http://mainnet-seed-0004.rsvpn.org:31003",
+			"http://mainnet-seed-0005.rsvpn.org:31003",
+			"http://mainnet-seed-0006.rsvpn.org:31003",
+			"http://mainnet-seed-0007.rsvpn.org:31003",
+			"http://mainnet-seed-0008.rsvpn.org:31003",
 		},
 		StunList: []string{
 			"stun:stun.l.google.com:19302",

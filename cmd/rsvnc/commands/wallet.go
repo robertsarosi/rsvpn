@@ -18,7 +18,7 @@ import (
 var walletCmd = &cobra.Command{
 	Use:   "wallet",
 	Short: "user wallet operation",
-	Long:  "With nknc wallet, you could control your asset.",
+	Long:  "With rsvnc wallet, you could control your asset.",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return walletAction()
 	},

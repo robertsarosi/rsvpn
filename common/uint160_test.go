@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// NKN address: NKNPkGps7i6yye6W2qSVsQUgiyqxWHEoTRby
+// RSVPN address: NKNPkGps7i6yye6W2qSVsQUgiyqxWHEoTRby
 // ToHexString(): 867ff0ca31905faec269949de37d27773ba7394e
 const NKNADDRESS = "\"NKNPkGps7i6yye6W2qSVsQUgiyqxWHEoTRby\""
 const NKNADDRESS_HEX = "867ff0ca31905faec269949de37d27773ba7394e"

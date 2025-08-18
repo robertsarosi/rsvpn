@@ -52,9 +52,9 @@ const (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:     "nknd",
+	Use:     "rsvnd",
 	Version: config.Version,
-	Short:   "nknd - The official NKN daemon for the NKN blockchain",
+	Short:   "rsvnd - The official RSVPN daemon for the RSVPN blockchain",
 	Long:    "",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if err := nknMain(); err != nil {
@@ -86,7 +86,7 @@ func init() {
 	rootCmd.Flags().StringVar(&config.SeedList, "seed", "", "Seed node address to join, multiple seeds should be split by comma")
 	rootCmd.Flags().StringVarP(&password.Passwd, "passwd", "p", "", "Password of Your wallet private Key")
 	rootCmd.Flags().BoolVar(&config.SkipNAT, "no-nat", false, "Skip NAT traversal for UPnP and NAT-PMP")
-	rootCmd.Flags().BoolVar(&config.Debug, "debug", false, "Provide runtime profiling data of NKN")
+	rootCmd.Flags().BoolVar(&config.Debug, "debug", false, "Provide runtime profiling data of RSVPN")
 	rootCmd.Flags().StringVar(&config.StatePruningMode, "pruning", "", "state pruning mode: none, lowmem")
 	rootCmd.Flags().StringVar(&config.SyncMode, "sync", "", "sync mode: full, fast, light")
 	rootCmd.Flags().StringVar(&config.PprofPort, "pprof-port", "", "The port used for pprof in debug mode")
@@ -430,7 +430,7 @@ type NetVer struct {
 
 func GetRemoteVersionNum() (int, error) {
 	var myClient = &http.Client{Timeout: 10 * time.Second}
-	r, err := myClient.Get("https://mainnet.nkn.org/version.json")
+	r, err := myClient.Get("https://mainnet.rsvpn.org/version.json")
 	if err != nil {
 		return 0, err
 	}
@@ -456,7 +456,7 @@ func netVersion(timer *time.Timer) {
 			continue
 		}
 		if verNum > NetVersionNum {
-			log.Fatal("Your current nknd is deprecated, Please download the latest NKN software from https://github.com/robertsarosi/rsvpn/releases")
+			log.Fatal("Your current rsvnd is deprecated, Please download the latest RSVPN software from https://github.com/robertsarosi/rsvpn/v2/releases")
 		}
 
 		timer.Reset(30 * time.Minute)

@@ -17,7 +17,7 @@ import (
 var pubsubCmd = &cobra.Command{
 	Use:   "pubsub",
 	Short: "manage topic subscriptions",
-	Long:  "With nknc pubsub, you could manage topic subscriptions.",
+	Long:  "With rsvnc pubsub, you could manage topic subscriptions.",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return subscribeAction(cmd)
 	},
